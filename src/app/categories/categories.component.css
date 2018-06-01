@@ -1,0 +1,148 @@
+.flex-container {
+ 
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+ text-align: center;
+  /* width: 59%; */
+  /* margin: auto; */
+  margin-left: 50px;
+
+  }
+  .divcat{
+    display: inline-block;
+  }
+  .catDiv {
+    display: inline-block;
+    background-color: #1d1919;
+    width: 270px;
+    height: 160px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 17px;
+    transition: 1s;
+    cursor: pointer;
+    color: white;
+    border-radius: 36px;
+    word-break: break-all;
+    overflow: hidden;
+    font-weight: 900;
+}
+.fa-edit{
+color: orange;
+font-size: 28px;
+}
+
+.fa-close{
+  color: red;
+  font-size: 28px;
+}
+h3.h1Cat{
+  display: inline-block;
+}
+.h1Cat h3{
+  padding: 9px 12px;
+    background-color: #333335;
+    border-radius: 10px;
+    margin: 10px;
+    color: white;
+    display: inline-block;
+}
+.divCatH{
+  border: 2px solid grey;
+  margin-bottom: 30px;
+}
+
+.h1Cat span{
+  color: white;
+  font-weight: 900;
+}
+.catDiv p {
+  line-height: 1.8;
+  padding: 14px 16px;
+}
+
+.addcat{
+  position: absolute;
+  right: 20px;
+  top: 5px;
+  color: white;
+  cursor: pointer;
+  border: 2px solid;
+  padding-left: 10px;
+  font-size: 19px;
+  background-color: green;
+  }
+  .addcat .fa{
+    font-size: 21px;
+    padding: 5px;
+    
+  }
+
+  .addcat div{
+    cursor: pointer;
+  }
+
+  .addcat div:hover{
+    color:black;
+  }
+  
+  
+  .modal{
+    
+    width:100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    display: block;
+    top:0;
+    left: 0;
+    padding-top:100px;
+    z-index: 100;
+    display:none;
+    padding-bottom:20px;
+  }
+ .modalBox{
+  width: 80%;
+  
+  background-color: white;
+  text-align: center;
+  margin:auto;
+padding-top:10px;
+  z-index: 100;
+  border-radius: 5px;
+ }
+ .modalBox p{
+   margin:10px;
+ }
+ .modalBox button{
+   width:100px;
+  
+  margin:10px;
+  margin-bottom: 23px;
+ }
+
+  .delete{
+   
+    text-align: center;
+    cursor: pointer;
+    
+  }
+
+  
+
+  .divcat{
+    display: inline-block;
+    position: relative;
+  }
+
+  .icons{
+    margin:10px;
+  }
+  textarea{
+    width: 30%;
+    margin:8px;
+  }
+  input{
+    margin:8px;
+  }

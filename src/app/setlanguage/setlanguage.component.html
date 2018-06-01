@@ -1,0 +1,26 @@
+<form> 
+   
+  <div class="controls">
+    <h1>Set Default Language</h1>
+  </div>
+  
+    <table cellpadding="10">
+      <tr>
+        <th>Language</th>
+        <th>Status</th>
+        <th>Check</th>
+      </tr>
+      <tr *ngFor="let lang of langs">
+          <td>{{lang.langName}}</td>
+          <td>{{lang.default}}</td>
+          <td *ngIf="lang.default==true"><input class='toggle' type="radio" name='check-3' checked='checked' />
+          </td>
+          <td *ngIf="lang.default==false"><input class='toggle' type="radio" name='check-3'  (change)="changeLang($event,lang._id)"/>
+          </td>
+        </tr>
+  
+</table>
+  
+     
+  
+</form>

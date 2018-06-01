@@ -1,0 +1,85 @@
+
+  <!-- <div class="clock" ><h3 class="goldtextcss" style="text-align:right">{{time | date:'fullDate'}} {{time | date:'HH:mm:ss'}}</h3></div>
+<ul >
+  
+  <li >Home</li>
+  <li routerLink="categories">Categories</li>
+  <li>Contact</li>
+  <li>About</li>
+  <li style="float:right"><i class="fa fa-user"></i> Administrator</li>
+</ul> -->
+ 
+ <div class="sidenav">
+    <div class="clock" ><h3 class="goldtextcss" >{{time | date:'fullDate'}} {{time | date:'HH:mm:ss'}}</h3></div>
+  <a routerLink="/about" >About</a>
+  <a routerLink="/setlanguage">Language</a>
+ 
+  <a routerLink="/contact">Contact</a>
+
+  <a routerLink="/categories">Categories</a>
+
+
+<!-- 
+   <button class="dropdown-btn" (click)="dropdown(drop,'categories',g)"><span #products>Products</span>
+    <i class="fa fa-caret-down"></i>
+  </button> 
+  
+  <div class="dropdown-container"  style="display:none"  #drop>
+  
+    <div *ngFor="let cat of categories">
+   <button class="dropdown-btn1" (click)="dropdown1(drop1,cat1.textContent)"><span #cat1>{{cat.categorieName}}</span>
+        <i class="fa fa-caret-down"></i>
+   </button>
+   
+    <div class="dropdown-container" style="display:none"  #drop1>
+        <div *ngFor="let cat1 of categories1">
+            <button class="dropdown-btn1" (click)="dropdown2(drop2,cat2.textContent)"><span #cat2>{{cat.categorieName}}</span>
+                <i class="fa fa-caret-down"></i>
+           </button>
+           <div class="dropdown-container" style="display:none"  #drop2>
+              <div *ngFor="let cat2 of categories2">
+                  <button class="dropdown-btn1" >{{cat.categorieName}}
+                      
+                 </button>
+                
+                </div>
+                
+         </div>
+          </div>
+   </div>
+</div>
+</div>  
+ -->
+
+
+  <button class="dropdown-btn" (click)="openCats(categDiv)"><span >Products</span>
+    <i class="fa fa-caret-down"></i>
+  </button> 
+
+<div class="dropdown-container" style="display:none;padding: 25px 1px;" #categDiv>
+<div *ngFor="let cat of categories" style="padding: 10px;border-top: 2px solid grey;width: 303px;margin-left: 11px;"  #mainDiv>
+     <p class="dropdown-btn pCat">{{cat.categorieName.en}}</p>
+<div *ngFor="let subcat of subcategories" #subDiv>
+      <p class="dropdown-btn pSubcat" *ngIf="subcat.mainCatId==cat.categorieName.en" (click)="getProducts1(subcat,subDiv)">{{subcat.categorieName.en}}</p>
+  <div *ngFor="let subsubcat of subsubcategories" #subsubDiv>
+         <p class="dropdown-btn pSubSubcat" *ngIf="subsubcat.subCatId==subcat.categorieName.en && subsubcat.mainCatId==cat.categorieName.en && subsubcat.mainCatId ==subcat.mainCatId" (click)="getProducts11(subsubcat,subsubDiv)" >{{subsubcat.categorieName.en}}</p>
+    <div *ngFor="let subsubsubcat of subsubsubcategories" #subsubsubDiv>
+            <p class="dropdown-btn pSubSubSubcat" *ngIf="subsubsubcat.subsubCatId==subsubcat.categorieName.en  && subsubsubcat.subCatId ==subsubcat.subCatId && subsubsubcat.subCatId==subcat.categorieName.en && subsubsubcat.mainCatId==subcat.mainCatId && subsubsubcat.mainCatId==subsubcat.mainCatId && subsubsubcat.mainCatId==cat.categorieName.en" (click)="getProducts111(subsubsubcat)" >{{subsubsubcat.categorieName.en}}</p>
+     </div>
+  </div>
+</div>
+</div>
+
+</div>
+
+
+
+
+
+  
+</div>
+
+<div class="main">
+ 
+<router-outlet></router-outlet>
+</div> 

@@ -1,0 +1,154 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    text-align: center
+}
+
+li {
+    display: inline-block;
+    float:left;
+    font-size: 18px;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    cursor: pointer;
+    color:	#D5AD6D; /*if no support for background-clip*/
+    background: -webkit-linear-gradient(transparent, transparent),
+    -webkit-linear-gradient(top, rgba(213,173,109,1) 0%, rgba(213,173,109,1) 26%, rgba(226,186,120,1) 35%, rgba(163,126,67,1) 45%, rgba(145,112,59,1) 61%, rgba(213,173,109,1) 100%);
+    /* background: -o-linear-gradient(transparent, transparent); */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+   font-weight: bold;
+}
+li:hover{
+    
+    -webkit-text-fill-color:#3e6f3e;
+   
+}
+li:last-child:hover{
+    background-color: #333;
+    -webkit-text-fill-color:transparent;
+    
+}
+
+
+li a:hover {
+    background-color: #111;
+}
+.goldtextcss {
+    color:	#D5AD6D; /*if no support for background-clip*/
+    background: -webkit-linear-gradient(transparent, transparent),
+    -webkit-linear-gradient(top, rgba(213,173,109,1) 0%, rgba(213,173,109,1) 26%, rgba(226,186,120,1) 35%, rgba(163,126,67,1) 45%, rgba(145,112,59,1) 61%, rgba(213,173,109,1) 100%);
+    /* background: -o-linear-gradient(transparent, transparent); */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+   
+    }
+.clock {
+    background-color:rgb(33,33,33);
+    
+    padding: 14px 16px;
+    /* background:radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+    radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    font-weight: bold; */
+    font-weight: bold;
+}
+
+.sidenav {
+    height: 100%;
+    width: 353px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+   
+}
+
+/* Style the sidenav links and the dropdown button */
+
+.sidenav a, .dropdown-btn, .dropdown-btn1 {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover, .dropdown-btn1:hover {
+    color: #f1f1f1;
+}
+
+/* Main content */
+.main {
+  
+    font-size: 20px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+    margin-top:50px;
+    margin-left: 300px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+   
+    color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+    display: none;
+    background-color: #262626;
+    padding-left: 8px;
+}
+.dropdown-container1 {
+    display: none;
+    background-color: #262626;
+    padding-left: 8px;
+}
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+    float: right;
+    padding-right: 8px;
+}
+.pSubcat {
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 25px;
+    margin-top: -9px;
+    border-left: 6px solid;
+}
+.pSubSubcat {
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 69px;
+    margin-top: -6px;
+    border-left: 3px solid;
+}
+.pCat {
+    font-size: 16px;
+    font-weight: 900;
+    margin-left: 5px;
+
+    border-left: 8px solid;
+
+}
+.pSubSubSubcat{
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 119px;
+    margin-top: -7px;
+    border-left: 1px solid;
+
+
+}

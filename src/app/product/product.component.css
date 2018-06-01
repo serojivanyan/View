@@ -1,0 +1,213 @@
+.flex-container {
+ 
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+   text-align: center;
+    /* width: 59%; */
+    /* margin: auto; */
+    margin-left: 60px;
+  padding-top: 20px;
+    }
+    .divcat{
+      display: inline-block;
+    }
+   .catDiv {
+    display: inline-block;
+      background-color: #f1f1f1;
+      
+      margin: 10px;
+      text-align: center;
+      line-height: 35px;
+      font-size: 20px;
+      transition: 1s;
+      cursor: pointer;
+      padding: 27px 0 5px 0px;
+    }
+    .catDiv img{
+        width:230px;
+        height: 200px;
+        margin-top:5px;
+    }
+    .newOrHot{
+        width: 100%;
+        text-align: center;
+        height: 50px;
+    }
+    .addcat{
+      position: absolute;
+      right: 20px;
+      top: 5px;
+      color: white;
+      cursor: pointer;
+      border: 2px solid;
+      padding-left: 10px;
+      font-size: 19px;
+      background-color: green;
+    }
+  .priceInpt{
+    width: 130px;
+  }
+    .addcat div{
+      cursor: pointer;
+    }
+  
+    .addcat div:hover{
+      color:#444;
+    }
+    
+    .divCatH{
+      border: 2px solid grey;
+      margin-bottom: 30px;
+    }
+
+    h3.h1Cat{
+      display: inline-block;
+    }
+    .h1Cat h3{
+      padding: 9px 12px;
+        background-color: #333335;
+        border-radius: 10px;
+        margin: 10px;
+        color: white;
+        display: inline-block;
+    }
+
+    .modal{
+      
+      width:100%;
+      height: 100%;
+      position: absolute;
+      background: rgba(0,0,0,0.5);
+      display: block;
+      top:0;
+      left: 0;
+      
+      z-index: 100;
+      display:none;
+    }
+   .modalBox{
+  width: 70%; 
+    background-color: white;
+    text-align: center;
+    margin:auto;
+  padding-top:10px;
+    z-index: 100;
+    border-radius:5px;
+    height: 100%;
+    overflow: scroll;
+   }
+   .modalBox p{
+     margin:10px;
+   }
+   .modalBox button{
+     width:100px;
+     
+    margin:10px;
+   }
+  textarea{
+      resize: none
+  }
+    .delete{
+     
+      text-align: center;
+      cursor: pointer;
+      
+    }
+  .new{
+    
+    background: #0085f7;
+    position: absolute;
+    top: 10px;
+    left: 175px;
+    width: 65px;
+    /* transform: rotate(33deg); */
+    color: white;
+
+  }
+  .hot{
+    
+    background: red;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 65px;
+    /* transform: rotate(33deg); */
+    color: white;
+
+  }
+    .divcat{
+      display: inline-block;
+      position: relative;
+    }
+  
+    .icons{
+      margin:10px;
+    }
+
+    .form-group label {
+        font-size: 17px
+    }
+
+    .container {
+      display: block;
+      position: relative;
+      padding-left: 35px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      font-size: 22px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+      position: absolute;
+   margin-left:10px;
+      height: 25px;
+      width: 25px;
+      background-color: #aaa;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+      background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+      background-color: green;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+      display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+      left: 9px;
+      top: 5px;
+      width: 5px;
+      height: 10px;
+      border: solid white;
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+  }

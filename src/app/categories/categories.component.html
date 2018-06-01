@@ -1,0 +1,65 @@
+
+  <div class="addcat" >
+     
+      <div (click)="addCategorie(addmodal)" >Add Categorie<i class="fa fa-plus-circle" ></i></div>
+    </div>
+   
+<div class="flex-container">
+  <div class="divCatH">
+  <h3  class = "h1Cat" *ngFor="let itH of str2" >
+    <h3 >{{itH}}</h3><span>  >  </span>
+  
+</h3>
+</div>
+ <div class="divcat" *ngFor="let cat of categories">
+  <div style="position: absolute;top: 105px;left: 103px;">
+    <span class="delete"><i class="fa fa-edit icons" (click)="edit(cat,modal,en1,am1,ru1,enDesc1,amDesc1,ruDesc1)"></i><i class="fa fa-close icons" (click)="delete(cat)"></i></span>
+  </div>  <div class="catDiv" routerLink="{{cat.categorieName.en}}" ><p>{{cat.categorieName.en}}</p></div>
+</div>
+
+
+<!-- -->
+<!-- 
+
+<div class="divcat">
+  <div style="position: absolute;top: 75px;left: 22px;"><span class="delete"><i class="fa fa-edit icons" (click)="edit(cat,modal)"></i><i class="fa fa-close icons" (click)="delete(cat)"></i></span></div>  <div class="catDiv" >car</div>
+</div>
+
+
+ -->
+
+<!-- -->
+
+
+
+  </div>
+<div class="modal" #modal>
+  <div class="modalBox" >
+    <p>Edit categorie</p>
+    
+  <input type="text" #en1>
+  <input type="text" #am1>
+  <input type="text" #ru1><br>
+  <textarea placeholder="categorie name" #enDesc1></textarea>  
+  <textarea placeholder="Կատեգորիայի անունը" #amDesc1></textarea>  
+  <textarea placeholder="Имя категории" #ruDesc1></textarea>  <br>
+ <button (click)="editBtn(en1,am1,ru1,enDesc1,amDesc1,ruDesc1,modal)">Edit</button>
+ <button (click)="cancel(modal)">Cancel</button>
+  </div>
+  </div>
+
+  <div class="modal" #addmodal>
+      <div class="modalBox" >
+        <p>Add categorie</p>
+  
+      <input type="text" #en value="" placeholder="categorie name">
+      <input type="text" #am value="" placeholder="Կատեգորիայի անունը">
+
+      <input type="text" #ru value="" placeholder="Имя категории"><br>
+      <textarea placeholder="categorie description" #enDesc></textarea>  
+      <textarea placeholder="Կատեգորիայի նկարագրություն" #amDesc></textarea>  
+      <textarea placeholder="Описание категории" #ruDesc></textarea>  <br>
+     <button (click)="AddBtn(en,am,ru,enDesc,amDesc,ruDesc,addmodal)">Add</button>
+     <button (click)="cancel(addmodal)">Cancel</button>
+      </div>
+      </div>

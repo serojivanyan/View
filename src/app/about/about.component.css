@@ -1,0 +1,11 @@
+.aboutDiv{
+    margin-left:60px;
+}
+input[type='submit']{
+    padding: 15px 45px;
+    background: grey;
+}
+textarea{
+    resize: vertical;
+    height: 100px;
+}

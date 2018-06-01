@@ -1,0 +1,28 @@
+<div class="aboutDiv">
+    <form #myForm="ngForm" novalidate>
+
+<div class="form-group">
+    <label>English</label>
+<textarea class="form-control" name="en" value ="{{data?.text.en}}" ngModel required ></textarea>
+<label>Հայերեն</label>
+<textarea class="form-control" name="am" value ="{{data?.text.am}}" ngModel required ></textarea>
+<label>Русский</label>
+<textarea class="form-control" name="ru" value ="{{data?.text.ru}}" ngModel required ></textarea>
+
+</div>
+
+<!-- <div class="form-group">
+    <label>Russian</label>
+    <textarea  class="form-control" name="ru" ngModel required ></textarea>
+    </div>
+
+<div class="form-group">
+    <label>Armenian</label>
+    <textarea class="form-control" name="arm" ngModel required ></textarea>
+    </div> -->
+<div class="form-group" >
+    <input type="submit" [disabled]="myForm.invalid" (click)="about(myForm.value)" class="btn btn-default" value="Submit" />
+</div>
+
+</form>
+</div>
